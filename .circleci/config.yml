@@ -49,7 +49,7 @@ jobs:
             export QUAY_REPO=$CIRCLE_PROJECT_REPONAME
             kd --context $CIRCLE_PROJECT_USERNAME --namespace $KUBE_NAMESPACE -f kube/deployment.yaml
             kd --context $CIRCLE_PROJECT_USERNAME --namespace $KUBE_NAMESPACE -f kube/service.yaml
-            ./get-service-ip.sh
+            ./.circleci/get-service-ip.sh
 
 workflows:
   version: 2
